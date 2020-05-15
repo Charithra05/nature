@@ -1,0 +1,22 @@
+{
+  "name": "nature",
+  "version": "1.0.0",
+  "description": "loading page",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass":"node-sass sass/main.scss resources/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Charithra05/nature.git"
+  },
+  "author": "charithra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Charithra05/nature/issues"
+  },
+  "homepage": "https://github.com/Charithra05/nature#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

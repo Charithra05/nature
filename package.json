@@ -4,7 +4,7 @@
   "description": "loading page",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss resources/css/style.css -w"
+    "watch:sass": "node-sass sass/main.scss resources/css/style.css"
   },
   "repository": {
     "type": "git",

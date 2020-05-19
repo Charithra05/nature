@@ -1,0 +1,67 @@
+.story{
+    width:75%;
+    margin:0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black,.8);
+    background-color: $color-white;
+    border-radius: 3px;
+    padding: 6rem 6rem 6rem 7.5rem;
+    font-size: $default-font-size;
+    transform: skewX(-12deg);
+    
+
+
+    &__shape{
+        height: 15rem;
+        width: 15rem;
+        float: left;
+        -webkit-shape-outside:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+        shape-outside:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+        clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+        transform: translateX(-8px) skewX(12deg);
+        position: relative;
+
+
+  
+    }
+    &__text{
+        height: 15rem;
+        transform: skewX(12deg);
+    }
+
+    &__img{
+        height: 100%;
+        transform: translateX(-3rem) scale(1.4);
+        backface-visibility: hidden;
+        transition: all .5s ease-in-out;
+    }
+
+    &__caption{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,20%);
+        text-transform: uppercase;
+        color: white;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        backface-visibility: hidden;
+        transition: all .5s ease-in-out;
+ 
+    }  
+
+    &:hover &__caption{
+        transform: translate(-50%,-50%);
+        opacity: 1;
+
+    } 
+
+
+    //this means that u gave hover to 
+    &:hover &__img{
+        transform: translateX(-3rem) scale(1);
+        filter: brightness(80%) blur(3px);
+    }
+
+
+}

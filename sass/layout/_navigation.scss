@@ -53,11 +53,11 @@
         width: 100%;
         position: fixed;
         top: 0;
-        left: 0; //if it is right the nav list enters from right
+        right: 0; //if it is right the nav list enters from right
         z-index: 1500;
         opacity: 0;
         width: 0; // the width increases form 0  to 100 on animation
-        transition: all .8s cubic-bezier(1,.04,.44,1.25);
+        transition: all .4s cubic-bezier(1,.04,.44,1.25);
     } 
 
     &__list {
@@ -104,7 +104,8 @@
     }
 
     &__checkbox:checked ~ &__background {
-        transform: scale(80);
+        transform: scale(120);
+
     }
     &__checkbox:checked ~ &__nav {
         opacity: 1;

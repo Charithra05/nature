@@ -7,6 +7,15 @@
     padding: 6rem 6rem 6rem 7.5rem;
     font-size: $default-font-size;
     transform: skewX(-12deg);
+
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+    @include respond(phone) {
+        transform: translateX(0rem) skew(0);
+    }
     
 
 
@@ -17,15 +26,25 @@
         -webkit-shape-outside:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
         shape-outside:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
         clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
-        transform: translateX(-8px) skewX(12deg);
+        transform: translateX(-3rem) skewX(12deg);
         position: relative;
+        overflow: hidden;
 
+        @include respond(phone) {
+            
+            transform: skewX(0deg);
+            margin: 2rem;
+        }
 
   
     }
     &__text{
-        height: 15rem;
         transform: skewX(12deg);
+
+        @include respond(phone) {
+            
+            transform: skewX(0deg);
+        }
     }
 
     &__img{

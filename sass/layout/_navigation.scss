@@ -1,4 +1,5 @@
 .navigation{
+    position: relative;
     height: 0;
     &__checkbox{
         display: none;
@@ -16,6 +17,15 @@
         z-index: 2000;
         cursor: pointer;
         text-align: center;
+
+
+        @include respond(tab-port){
+            height: 5rem;
+            width: 5rem;
+            top: 4rem;
+            right: 4rem;
+            position: fixed;
+        }
     }
     &__background{
         height: 6rem;
@@ -28,11 +38,25 @@
         z-index: 1000; 
         //transform: scale(60);
         transition:all .8s ;
+
+        @include respond(tab-port){
+            height: 4rem;
+            width: 4rem;
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
+        @include respond(phone){
+            height: 4rem;
+            width: 4rem;
+            top: 3rem;
+            right: 3rem;
+        }
     }
     &__nav{
         height: 100vh;
         width: 100%;
-        position: absolute;  // to make any element absolute the parent position must must be defined with some value ... either relative or fixed or some thing but position shuld be defined explicitly.
+        //position: absolute;  // to make any element absolute the parent position must must be defined with some value ... either relative or fixed or some thing but position shuld be defined explicitly.
         top: 0;
         right: 0;
         z-index: 1500;
@@ -41,7 +65,7 @@
         transition: all .8s cubic-bezier(1,.04,.44,1.25);
     }
     &__list{
-        position:absolute; // here you defined an element (__list) positon as absolute and didnt mentioned its parent position to relative 
+        position:absolute;  
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
